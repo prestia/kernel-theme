@@ -1,0 +1,48 @@
+<div class="page-header">
+	<h4 class="cat">&nbsp;<a style="color:white;" href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ page.category }}-ref">{{ page.category | join: "/" }}</a>&nbsp;</h4>
+	{% unless page.tags == empty %}
+	  <h4 style="display:inline;">
+	  {% assign tags_list = page.tags %}
+	{% if site.JB.tags_list.provider == "custom" %}
+	  {% include custom/tags_list %}
+	{% else %}
+	  {% if tags_list.first[0] == null %}
+	    {% for tag in tags_list %} 
+	    	<h4 class="top_tag"><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }}</a></h4>
+	    {% endfor %}
+	  {% else %}
+	    {% for tag in tags_list %} 
+	    	<h4 class="top_tag"><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }}</a></h4>
+	    {% endfor %}
+	  {% endif %}
+	{% endif %}
+	{% assign tags_list = nil %}
+	  </h4>
+	{% endunless %}
+  <h1>{{ page.title }}</h1>
+  <span style="text-transform:uppercase;">By {% if page.author.name %}<a href="http://twitter.com/{{ page.author.twitter}}">{{ page.author.name }}</a>{% elsif site.author.name %}<a href="http://twitter.com/{{ site.author.twitter }}">{{ site.author.name }}</a>{% endif %} on {{ page.date | date_to_long_string }}</span>
+</div>
+
+<div class="row">
+  <div class="span10">
+    {{ content }}
+	{% if site.author.twitter %}<p style="margin-top:2.5em;"><strong>Read this far? Then you should follow me on twitter <a href="http://twitter.com/{{ site.author.twitter }}">here</a>.</strong></p>{% endif %}
+    <hr>
+    <div class="pagination">
+      <ul>
+      {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      {% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+      {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>Next &rarr;</a>
+      {% endif %}
+      </ul>
+    </div>
+    <hr>
+    {% include JB/comments %}
+  </div>

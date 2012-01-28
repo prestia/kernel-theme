@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>dodo&#58; A Template for toto</title>
+    
+    <meta name="author" content="Anthony Prestia">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Styles -->
+    <link href="/assets/themes/kernel/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/kernel/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">prestia.org</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+  
+    
+    	
+    	<li><a href="/about.html">About</a></li>
+    	
+    
+  
+    
+    	
+    	<li><a href="/archive.html">Archive</a></li>
+    	
+    
+  
+    
+  
+    
+    	
+    	<li><a href="/categories.html">Categories</a></li>
+    	
+    
+  
+    
+  
+    
+  
+    
+    	
+    	<li><a href="/tags.html">Tags</a></li>
+    	
+    
+  
+
+
+
+			
+            
+            
+
+
+  
+    
+  
+    
+  
+    
+  
+    
+    	
+    	<li><a href="/atom.xml">Subscribe</a></li>
+    	
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+	<h4 class="cat">&nbsp;<a style="color:white;" href="/categories.html#projects-ref">projects</a>&nbsp;</h4>
+	
+	  <h4 style="display:inline;">
+	  
+	
+	  
+	     
+	    	<h4 class="top_tag"><a href="/tags.html#toto-ref">toto</a></h4>
+	     
+	    	<h4 class="top_tag"><a href="/tags.html#dodo-ref">dodo</a></h4>
+	     
+	    	<h4 class="top_tag"><a href="/tags.html#github-ref">github</a></h4>
+	     
+	    	<h4 class="top_tag"><a href="/tags.html#html5-ref">html5</a></h4>
+	    
+	  
+	
+	
+	  </h4>
+	
+  <h1>dodo&#58; A Template for toto</h1>
+  <span style="text-transform:uppercase;">By <a href="http://twitter.com/_arp">Anthony Prestia</a> on 10 August 2011</span>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <h2>What is dodo?</h2>
+
+<p>Dodo is a personal blogging template for the compact, hacker-friendly blog engine <a href="http://github.com/cloudhead/toto">toto</a>. Dodo looks beautiful and degrades gracefully thanks to <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="http://jquery.com/">jQuery</a>, <a href="http://www.modernizr.com/">modernizr</a>, <a href="https://code.google.com/p/hyphenator/">hyphenator.js</a>, and <a href="http://softwaremaniacs.org/soft/highlight/en/">highlighter.js</a>. All posts are written in <a href="http://daringfireball.net/">John Gruber</a>'s excellent <a href="http://daringfireball.net/projects/markdown/">markdown</a> syntax and published to <a href="http://heroku.com/">Heroku</a> using <a href="http://git-scm.com/">git</a>.</p>
+
+<p>Dodo was written by <a href="http://anthonyprestia.com">Anthony Prestia</a> and you can see it in action on his (now retired) <a href="http://blog.anthonyprestia.com">personal blog</a>.</p>
+
+<h2>Want to try dodo?</h2>
+
+<p>Assuming you are already a <a href="http://github.com">GitHub</a> and <a href="http://heroku.com">Heroku</a> user, setup takes less than 10 seconds:</p>
+
+<pre><code>$ git clone git://github.com/prestia/dodo.git &lt;blog_name&gt;
+$ cd &lt;blog_name&gt;
+$ heroku create &lt;blog_name&gt;
+$ git push heroku master
+</code></pre>
+
+<h2>Configuration</h2>
+
+<p>Once installed, you can configure dodo by modifying the <code>config.ru</code> file. The default options are as follows:</p>
+
+<pre><code>set :blog_title,   ''  # main blog title
+set :author,       ''  # blog author
+set :root,         "index"  # page to load on /
+set :markdown,     :smart  # use markdown + smart-mode
+set :disqus,       ''  # disqus id, or false
+set :fulltext,     ''  # for index, true or false
+set :summary,      :max =&gt; 150, :delim =&gt; /~/
+set :ext,          'txt'  # file extension for articles
+set :cache,        28800  # cache duration, in seconds
+
+set :git,          false  # github username
+set :twitter,      false  # twitter username
+set :description,  ''  # default blog description
+set :main_url,     ''  # main, non-blog url
+set :analytics,    ''  # your site's Google Analytics ID
+
+set :date,         lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") } # date format for articles
+</code></pre>
+
+<h2>Problems?</h2>
+
+<p>Dodo is a work in progress. While it is perfectly stable, some code is still a bit messy and there may be some layout hiccups. If you have any problems using <a href="http://github.com/prestia/dodo">dodo</a>, please submit them <a href="https://github.com/prestia/dodo/issues">here</a>.</p>
+
+	<p style="margin-top:2.5em;"><strong>Read this far? Then you should follow me on twitter <a href="http://twitter.com/_arp">here</a>.</strong></p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/opinions/2011/08/07/a-horseman-arrives" title="A Horseman Arrives">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/writings/2011/08/14/gapcom-is-a-nightmare-waiting-to-happen" title="Gap.com is a Nightmare Waiting to Happen">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+  </div>
+
+  <div class="span4">
+    <!--<img src="/images/me.jpg" alt="Anthony Prestia">-->
+    <div style="margin-top:1em;" class="hr">&nbsp;</div>
+    <h4>About</h4>
+    <p>Anthony Prestia is an <a href="http://www.networkadvertising.org/about/staff.asp">attorney</a> & <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Hacker_(term)#Programmer_subculture_of_hackers">hacker</a> living in <a href ="http://proudlymadeindc.com">Washington, DC</a>. When he's not writing about himself in the third person, he's probably diving headfirst into a harebrained project that he knows too little about or having a drink at one of his <a href="http://passengerdc.com/columbia/index.cfm">favorite</a> <a href="http://www.meridianpint.com">local</a> <a href="http://passengerdc.com">spots</a>.</p>
+    <div style="margin-top:1em;" class="hr">&nbsp;</div>
+    <h4>Links</h4>
+    
+      <a href="http://twitter.com/_arp">twitter &raquo; _arp</a><br/>
+    
+    
+      <a href="http://github.com/prestia">github &raquo; prestia</a><br/>
+    
+    
+    
+      <a href="http://linkedin.com/in/prestia">linkedin &raquo; prestia</a><br/>
+    
+    
+      <a href="http://prestia.tumblr.com">tumblr &raquo; prestia</a><br/>
+    
+    
+      <a href="http://gplus.to/prestia">google+ &raquo; prestia</a><br/>
+    
+    
+      <a href="http://quora.com/anthony-prestia">quora &raquo; anthony-prestia</a><br/>
+    
+    <div style="margin-top:1em;" class="hr">&nbsp;</div>
+    <h4>Disclaimer</h4>
+    <p>None of the views expressed on this website are representative of the views of the <a href="http://networkadvertising.org">Network Advertising Initiative</a> or its <a href="http://www.networkadvertising.org/participating">member companies</a>. Nothing on this website should be construed as legal advice.</p>
+  </div>
+</div>
+      </div>
+
+
+      <footer>
+        <p>&copy; Anthony Prestia. This website is powered by <a href="https://github.com/mojombo/jekyll/">jekyll</a> and <a href="https://github.com/prestia/kernel-theme">kernel-theme</a>.
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+  <script defer src="/js/plugins.js"></script>
+  <script defer src="/js/script.js"></script>
+  <script type="text/javascript">$("p").addClass("hyphenate");</script>
+  <script type="text/javascript" src="/js/hyphenator.js"></script>
+
+
+  <script type="text/javascript"> 
+    Hyphenator.run();
+  </script>
+
+
+  </body>
+</html>
+
