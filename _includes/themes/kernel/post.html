@@ -26,7 +26,8 @@
 <div class="row">
   <div class="span10">
     {{ content }}
-	{% if site.author.twitter %}<p style="margin-top:2.5em;"><strong>Read this far? Then you should follow me on twitter <a href="http://twitter.com/{{ site.author.twitter }}">here</a>.</strong></p>{% endif %}
+	{% if site.author.twitter %}<p style="margin-top:2.5em;"><strong>Read this far? Then you should follow me on twitter <a href="http://twitter.com/{{ site.author.twitter }}">here</a>.{% endif %}</p>
+	<p>{% if site.author.email %}Have a comment, rebuttal or words of praise? If so, email me: <a href='mailto&#58;&#112;r&#101;stia&#37;40s&#104;&#111;r&#116;mai%6&#67;&#46;%6D%&#54;5'>&#112;rest&#105;a&#64;short&#109;ai&#108;&#46;me</a>{% endif %}</strong>.</p>
     <hr>
     <div class="pagination">
       <ul>
