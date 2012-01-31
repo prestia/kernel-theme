@@ -1,30 +1,15 @@
-# Jekyll-Bootstrap
+# kernel-theme
 
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
+A theme for [Jekyll-Bootstrap](https://github.com/plusjade/jekyll-bootstrap) loosely based on [Twitter Boostrap](http://twitter.github.com/bootstrap/) and the [Kernel Magazine](http://kernelmag.com) layout.
 
 ## Usage
 
-For all usage and documentation please see: <http://jekyllbootstrap.com>
+Kernel-theme is actually a complete repo of my personal blog. It is a highly opinionated layout that may require a bit of tweaking to make perfect for your own uses. Please remove and original content from the layout (blog posts, about pages, etc.) before using it for your own website.
 
-## Version
+## Contributing
 
-0.1.0 - stable and versioned using [semantic versioning](http://semver.org/).
-
-## Contributing 
-
-This repository tracks 2 projects:
-
-- **Jekyll-Bootstrap Framework.**  
-  The framework for which users should clone and build their blog on top of is available in the master branch.
-  Please fork and contribute additions to the framework itself here.
- 
-- **Jekyll-Bootstrap Documentation Website.**    
-  The documentation website at <http://jekyllbootstrap.com> is maintained in the gh-pages branch.
-  Please fork and contribute documentation additions to this branch only.
-
-The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!
-
+Although kernel-theme is highly opinionated and designed to suit my own purposes, I welcome refinements and improvements. Feel free to fork the repo and make suggestions.
 
 ## License
 
-[Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+The kernel-theme itself is distributed under a [Creative Commons (BY-NC-SA 3.0) license](http://creativecommons.org/licenses/by-nc-sa/3.0/). Any individual posts or other original content included in the repo are &copy; Anthony Prestia.
