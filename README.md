@@ -4,7 +4,7 @@ A theme for [Jekyll-Bootstrap](https://github.com/plusjade/jekyll-bootstrap) loo
 
 ## Usage
 
-Kernel-theme is actually a complete repo of my personal blog. It is a highly opinionated layout that may require a bit of tweaking to make perfect for your own uses. Please remove and original content from the layout (blog posts, about pages, etc.) before using it for your own website.
+Kernel-theme is actually a complete repo of my personal blog. It is a highly opinionated layout that may require a bit of tweaking to make perfect for your own uses. Please remove any original content from the layout (blog posts, about pages, etc.) before using it for your own website.
 
 ## Contributing
 
